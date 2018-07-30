@@ -1,0 +1,245 @@
+body{font-family:Helvetica;}
+html
+{
+	font-size:100px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.clearfix2::before {
+    content: "";
+    clear: both;
+    display: table;
+}
+.container
+{
+	width: 5.4rem;
+	height: 9.6rem;
+	background: url(../img/background.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+
+}
+.cover
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 90;
+	background-color: rgba(0,0,0,0.08)!important;
+	background: #000000;/*IE*/
+  	filter: alpha(opacity=8);/*IE*/
+  	display: none;
+
+}
+.mobi_nav 
+{
+	width: 3.91rem;
+	margin: 0px auto;
+	margin-top: 0.48rem;
+
+}
+.logo 
+{
+	width: 0.38rem;
+	height: auto;
+	float: left;
+}
+.itname
+{
+	font-size: 0.16rem;
+	float: left;
+	letter-spacing: 0.03rem;
+	color: #ffffff;
+	margin-left: 0.175rem;
+	margin-top: 0.11rem;
+	
+}
+
+.menu
+{
+	width: 0.275rem;
+	height: 0.03rem;
+	border-top: 0.03rem solid white;
+	border-bottom: 0.03rem solid white;
+	padding: 0.03rem 0 0.03rem 0;
+	background-color: white;
+	float: right;
+	background-clip: content-box;
+	margin-top: 0.1rem;
+
+}
+
+.openmenu
+{
+	width: 2.225rem;
+	height: 3.63rem;
+	background-color: #ffffff;
+	border-radius: 0.05rem;
+	position: absolute;
+	right: 0.395rem;
+	top: 1.07rem;
+	z-index: 100;
+	display: none;
+
+}
+
+.openmenu:before {
+    border-left: 0.075rem solid transparent;
+    border-right: 0.075rem solid transparent;
+    border-bottom: 0.15rem solid #ffffff;
+    content: "";
+    position: absolute;
+    top: -0.15rem;
+    right: 0.45rem;    
+    width: 0;
+
+}
+.openmenu li
+{
+	width: 100%;
+	height: 0.51rem;
+	line-height: 0.51rem;
+	font-size: 0.16rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.02rem;
+	color: #000000;
+	text-align: center;
+	vertical-align: middle;
+}
+.openmenu li:hover
+{
+	background-color: #74bee1;
+	color: #ffffff;
+}
+.openmenu .nowpage
+{
+	background-color: #74bee1;
+	color: #ffffff;
+}
+/*以上为导航栏部分*/
+h2
+{
+	font-size: 0.14rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.01rem;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 0.39rem;
+}
+.line
+{
+	width: 0.3rem;
+	height: 0.02rem;
+	background-color: #face6f;
+	margin: 0px auto;
+	margin-top: 0.11rem;
+
+}
+.balls
+{
+	width: 3.47rem;
+	margin: 0px auto;
+	margin-top: 0.93rem;
+}
+.balls>div
+{
+	width: 0.97rem;
+	float: left;
+	/*position: relative;*/
+
+}
+.balls .frontend
+{
+	width: 1.18rem;
+	margin-right: 1.29rem;
+	margin-bottom: 0.72rem;
+}
+.balls .program
+{
+	margin-bottom: 0.72rem;
+}
+.balls img
+{
+	max-width: 100%;
+	height: auto;
+}
+.ui
+{
+	clear: left;
+	margin-right: 1.51rem;
+}
+.name
+{
+	text-align: center;
+	font-size: 0.15rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.02rem;
+	color: #ffffff;
+
+}
+.texts>div
+{
+	display: none;
+	position: absolute;
+	top: 2.25rem;
+	left: 50%;
+	margin-left: -2.23rem;
+	z-index: 50;
+	width: 4.46rem;
+	height: 4rem;
+	background-color: #ffffff;
+	border-radius: 0.1rem;
+	border: solid 0.01rem #458bac;
+	opacity: 0.85;
+}
+/*.ftext
+{*/
+
+/*}*/
+.texts p
+{
+	width: 2.71rem;
+	font-size: 0.13rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.01rem;
+	color: #333333;
+	margin: 0px auto;
+}
+.texts h3
+{
+	font-size: 0.15rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.02rem;
+	color: #458bac;
+	text-align: center;
+	margin-top: 0.5rem;
+	margin-bottom: 0.46rem;
+}
+
+.leftplanet
+{
+	width: 4.01rem;
+	height: auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.person
+{
+	width: 0.89rem;
+	height: auto;
+	position: absolute;
+	left: 1.41rem;
+	bottom: 1rem;
+}
