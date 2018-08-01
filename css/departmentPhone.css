@@ -40,8 +40,14 @@ html
 .mobi_nav 
 {
 	width: 3.91rem;
+	height: 0.38rem;
+	/*width: 5.4rem;*/
 	margin: 0px auto;
 	margin-top: 0.48rem;
+	padding-left: 0.745rem;
+	padding-right: 0.745rem;
+	/*background-color: #f7f7f7;*/
+
 
 }
 .logo 
