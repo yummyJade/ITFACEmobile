@@ -368,12 +368,183 @@ h2
 }
 .liuxing2
 {
-	width: 0.4rem;
+    width: 0.35rem;
     height: auto;
     position: absolute;
-    left: 3rem;
-    top: 2rem;
+    left: 2rem;
+    top: 3.05rem;
 }
+.index_bottom h2
+{
+	font-size: 0.13rem;
+	letter-spacing: 0.003rem;
+	color: #333333;
+	text-align: center;
+	margin-bottom: 0.07rem;
+	margin-top: 0.5rem;
+}
+.index_bottom .line
+{
+	width: 0.3rem;
+	height: 0.02rem;
+	background-color: #7ecef4;
+	margin: 0px auto;
+
+
+}
+
+.yuan
+{
+	width: 0.425rem;
+	height: 0.425rem;
+	background-image: linear-gradient(0deg, 
+		#ffb219 0%, 
+		#fdc045 6%, 
+		#face70 100%), 
+	linear-gradient(
+		#f2357e, 
+		#f2357e);
+	background-blend-mode: normal, 
+		normal;
+	box-shadow: 0rem 0.02rem 0.02rem 0rem 
+		rgba(0, 0, 0, 0.09);
+	border-radius: 0.2125rem;
+	position: relative;
+	margin:0px auto;
+}
+.yuanselect>div
+{
+	width: 0.425rem;
+	height: 0.425rem;
+	background-image: linear-gradient(0deg, 
+		#2aa8d9 0%, 
+		#54bbe7 18%, 
+		#7ecef4 100%), 
+	linear-gradient(
+		#f2357e, 
+		#f2357e);
+	background-blend-mode: normal, 
+		normal;
+}
+.yuan img
+{
+	width: 0.205rem;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -0.1025rem;
+	top: 50%;
+	margin-top: -0.1rem;
+}
+.topic1 img
+{
+	margin-top: -0.11rem;
+}
+.topic2 img
+{
+	margin-top: -0.0925rem;
+}
+
+.topics p
+{
+	font-size: 0.09rem;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0.009rem;
+	color: #407e9c;
+	margin-top: 0.1rem;
+	text-align: center;
+	/*display: inline;*/
+	/*display: block;
+	position: absolute;
+	top: 0.535rem;
+	left: 0;*/
+
+}
+.topics>div
+{
+	float: left;
+	width: 0.63rem;
+	height: auto;
+	height: 0.75rem;
+	margin: 0px;
+	position: relative;
+	margin-right: 1.17rem;
+
+}
+.topic3
+{
+	margin-right: 0!important;
+}
+.topics
+{
+	width: 4.23rem;
+	height: 0.75rem;
+	margin: 0px auto;
+	margin-top: 0.43rem;
+}
+.intro_detail
+{
+	
+}
+.SYcontainer2
+{
+	position: relative;
+}
+.qiu1
+{
+	position: absolute;
+	width: 3rem;
+	height: auto;
+	left: -1.66rem;
+	bottom: 0.6rem;
+}
+.qiu2
+{
+	position: absolute;
+	width: 1.51rem;
+	height: auto;
+	left: 3.885rem;
+	bottom: 2.12rem;
+}
+.indextext>div
+{
+	width: 4.7rem;
+	height: 3.675rem;
+	background-color: rgba(42,168,217,0.85)!important;
+	background-color: #2aa8d9;
+	border-radius: 0.1rem;
+	filter:alpha(opacity=0.85);
+	position: relative;
+	z-index: 50;
+	margin: 0px auto;
+	margin-top: 0.65rem;
+}
+.indextext>div h3
+{
+	font-size: 0.18rem;
+	letter-spacing: 0.018rem;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 0.63rem;
+	margin-bottom: 0.73rem;
+}
+.indextext p
+{
+	width: 3.56rem;
+	font-size: 0.13rem;
+	letter-spacing: 0.013rem;
+	color: #ffffff;
+	margin: 0px auto;
+}
+.indextext img
+{
+	width: 0.685rem;
+	height: auto;
+	margin-left: 2.01rem;
+
+}
+
 /*这是部门介绍*/
 .balls
 {

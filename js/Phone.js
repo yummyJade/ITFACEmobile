@@ -104,9 +104,24 @@ $(document).ready(function() {
         }
     });
 });
+//首页部分
+
+
+// 点击小圆切换事件
+
+$(".SYcontainer2 .topics>div").click(function(){
+    var index = $(".SYcontainer2 .topics>div").index(this);
+    $topic = $(".SYcontainer2 .topics>div");
+    $topic.removeClass('yuanselect');
+    $topic.eq(index).addClass('yuanselect');
+
+    //切换对应的文字框
+    $(".indextext>div").hide();
+    $(".indextext>div").eq(index).show();
+})
 
 //部门展示部分
-$(".balls>div").click(function() {
+$(".balls>div").click(function(event) {
     // bdclose();
     //阻止事件冒泡
     event.stopPropagation();
@@ -140,7 +155,7 @@ function addwork() {
 
 
     var obj = {
-        url: 'http://5x735a.natappfree.cc/api/workshow/',
+        url: 'http://ktchen.cn:8080ss/api/workshow/',
         method: 'GET',
         dataType: 'Default: Intelligent Guess',
         async: true

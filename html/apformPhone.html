@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>纳新报名表</title>
+	
+	<link rel="stylesheet" href="../css/apformPhone.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header"></div>
+		<div class="mainer">
+			<div class="logo"><a href="http://222.195.145.152:2018/home/index/"><img src="../images/logo.png" alt=""></a></div>
+			<div class="formheader">爱特工作室2018秋季招新报名表</div>
+	
+			<form class="apform" action="" method="post" id="apform" onsubmit="return false" >
+					<div class="formbody">
+						<div class="basic_info">
+							<div class="info_title">姓名</div>
+							<div class="info_input clearfix">
+								<input type="text" class="name">
+							</div>
+							
+							<div style="clear: both;"></div>
+						</div>
+						<div class="basic_info clearfix">
+							<div class="info_title">专业</div>
+							<div class="info_input clearfix">
+								<input type="text" class="profession">
+							</div>
+						</div>
+						<div class="basic_info clearfix">
+							<div class="info_title">QQ</div>
+							<div class="info_input clearfix">
+								<input type="text" class="qq">
+							</div>
+						</div>
+						<div class="basic_info clearfix">
+							<div class="info_title">手机</div>
+							<div class="info_input clearfix">
+								<input type="text" class="phonenumber">
+							</div>
+						</div>
+						<div class="basic_info clearfix">
+							<div class="info_title">邮箱</div>
+							<div class="info_input clearfix">
+								<input type="text" class="email">
+							</div>
+						</div>
+						<div style="clear: both;"></div>
+						<div class="intention clearfix">
+							<div class="choosehead">请选择意向部门</div>
+							<ul class="clearfix choosebody">
+								<li value="1">前端部门</li>
+								<li value="2">UI部门</li>
+								<li value="3">程序部门</li>
+								<li value="4">安卓部门</li>
+							</ul>
+						</div>
+						<div style="clear: both;"></div>
+						<div class="intention_choose"></div>
+						<div class="self_introduction">
+							<div class="intro_title">个人简介</div>
+							<textarea name="introduction" id="" cols="" rows="" class="introduction"></textarea>
+							<div class="intro_tip">（不要超过200字）</div>
+						</div> 
+						<div class="buttonwrap clearfix">
+							
+							<button class="apform_submit" ></button>
+							<button class="apform_check" ></button>
+						</div>
+						
+					</div>
+		
+			</form>
+			<div class="verify clearfix"   style="display: none;">
+
+				<h2>请输入邮箱中含有的身份码</h2>
+				<div class="inputwrap"><input type="text"></div>
+				<div class="button_1"><button class="verify_check"></button></div>
+				<div class="button_2"><button class="verify_back"></button></div>
+
+			</div>
+			<div class="processform" style="display: none;">
+				<div class="info clearfix name">
+					<div class="title name">姓名:</div>
+					<div class="content">浦则元</div>
+				</div>
+				<div class="info clearfix">
+					<div class="title">专业:</div>
+					<div class="content">电子信息工程</div>
+				</div>
+				<div class="info clearfix">
+					<div class="title">意向部门:</div>
+					<div class="content">UI部门</div>
+				</div>
+				<div class="info clearfix2">
+					<div class="title sign">目前报名状态:</div>
+					<div class="state">
+						<div class="line">
+							
+						</div>
+						<div class="dots">
+				
+						</div>
+						<div class="events">
+							<!-- <div class="event">
+								<span>2018年9月10日</span>
+								<span> 网上报名</span>
+								<span>成功</span>
+							</div>
+							<div class="event">
+								<span>2018年9月10日</span>
+								<span> 网上报名</span>
+								<span>成功</span>
+							</div>
+							<div class="event">
+								<span>2018年9月10日</span>
+								<span> 网上报名</span>
+								<span>成功</span>
+							</div> -->
+							
+						</div>
+
+					</div>
+				</div>
+			
+				<div class="pbutton_wrap"><button class="processform_return"></button></div>
+			</div>
+		</div>
+	</div>
+	<!-- 兼容ie的promise -->
+	<script src = "https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<!-- IE8只能支持jQuery1.9-->
+<!--[if IE 8]>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<![endif]-->
+	<script src="../js/apformPhone.js"></script>
+</body>
+
+</html>
