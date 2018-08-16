@@ -39,33 +39,6 @@ function promisesetajax(obj) {
 }
 
 
-//神奇流星
-function liuxin() {
-
-    var l1 = Math.random() * 5 + 1;
-    var h1 = Math.random() * 3 + 1;
-    $(".hx").eq(0).css({
-        'left': 0,
-        'top': l1 + 'rem'
-    })
-    $(".hx").eq(1).css({
-        'left': h1 + 'rem',
-        'top': 0
-    })
-    $(".hx").eq(0).animate({
-        'left': '5.4rem',
-        'top': (l1 + 5.4) + 'rem'
-    }, 2000)
-    $(".hx").eq(1).animate({
-        'left': (h1 + 5.4) + 'rem',
-        'top': '5.4rem'
-    }, 2000)
-}
-liuxin();
-setInterval(function() {
-    // alert("55");
-    liuxin();
-}, 4000);
 //导航栏点击部分
 $(".menu").click(function(event) {
     $(".cover").height(H);
@@ -91,31 +64,22 @@ $(".cover").click(function(event) {
 
 });
 //点击导航栏实现响应跳转定位
-$(".openmenu li").mouseover(function(event) {
-    $(this).css({
-        'background-color': '#74bee1',
-        'color': '#ffffff'
-    })
-});
-$(".openmenu li").mouseout(function(event) {
-    $(this).css({
-        'background-color': '#ffffff',
-        'color': '#000000'
-    })
-});
+
 $(".openmenu li").click(function() {
         var index = $(".openmenu li").index(this);
 
         // $("html").animate({scrollTop:$("#Anchor2").offset().top},1000)
         if (index != 6) {
             location.href = "#Anchor" + (index + 1);
-        } else {
-            location.href = '/fresher/newM/';
         }
-        //您可以在这里写报名表的url
         $(".openmenu").hide();
-        $(".cover").hide();
-
+            $(".cover").hide();
+    
+        // else
+        // {
+        //     location.href = 
+        // }
+        //您可以在这里写报名表的url
 
 
     })
@@ -169,68 +133,20 @@ $(window).scroll(function() {
 
 });
 
-// $(document).on("scrollstart", function() {
-//     alert("开始滚动!");
-// });
+$(document).on("scrollstart", function() {
+    alert("开始滚动!");
+});
 
-// $(document).on("scrollstop", function() {
-//     alert("停止滚动!");
-// });
+$(document).on("scrollstop", function() {
+    alert("停止滚动!");
+});
 // })
 
 //首页部分
 
 
-
-//首页背景
-function moveyellow() {
-    $(".planet_yellow").animate({
-        'top': '4.355rem'
-    }, 4000, function(){
-        $(".planet_yellow").animate({
-            'top': '4.255rem'
-
-        }, 4000)
-    
-    setTimeout(function() {
-        moveyellow();
-    }, 1000)
-})
-}
-moveyellow();
-function movehuan() {
-    $(".planet_huan").animate({
-        'left': '0.435rem',
-            'top': '4.315rem'
-    }, 5000, function(){
-        $(".planet_huan").animate({
-            'left': '0.235rem',
-            'top': '4.115rem'
-
-        }, 5000)
-    
-    setTimeout(function() {
-        movehuan();
-    }, 700)
-})
-}
-movehuan();
-function moveblue() {
-    $(".planet_blue").animate({
-        'left': '0.54rem'
-    }, 4000, function(){
-        $(".planet_blue").animate({
-            'left': '0.44rem'
-
-        }, 4000)
-    
-    setTimeout(function() {
-        moveblue();
-    }, 1000)
-})
-}
-moveblue();
 // 点击小圆切换事件
+
 
 $(".topics>div").click(function() {
     var index = $(".topics>div").index(this);
@@ -265,12 +181,11 @@ $(".balls>div").click(function(event) {
 
 })
 
-$(".DEcontainer").click(function(event) {
+$(document).click(function(event) {
     var _con = $(".texts div"); // 设置目标区域
     if (!_con.is(event.target) && _con.has(event.target).length === 0) { // Mark 1
         $(".texts div").hide();
     }
-
 });
 
 
@@ -310,7 +225,7 @@ function addwork() {
 
                 if (data.workshows.length > 3) {
                     for (var i = 0, m = 3; i < m; i++) {
-                        str += " <div class=\"work clearfix\">\n                        <div class=\"imgwrap\"><a href=\"" + data.workshows[i].link + "\"><img src=\"/image/" + data.workshows[i].pic + "\" alt=\"\"></a></div>\n                        <div class=\"workname\">" + data.workshows[i].name + "</div>\n                    </div>";
+                        str += " <div class=\"work clearfix\">\n                        <div class=\"imgwrap\"><a href=\"" + data.workshows[i].link + "\"><img src=\"" + data.workshows[i].pic + "\" alt=\"\"></a></div>\n                        <div class=\"workname\">" + data.workshows[i].name + "</div>\n                    </div>";
 
                         //     str += ` <div class="work clearfix">
                         //     <div class="imgwrap"><a href="${data.workshows[i].link}"><img src="${data.workshows[i].pic}" alt=""></a></div>
@@ -321,7 +236,7 @@ function addwork() {
                     $(".workaddwrap").css('display', 'block');
                 } else {
                     for (var i = 3, m = data.workshows.length; i < m; i++) {
-                        str += " <div class=\"work clearfix\">\n                        <div class=\"imgwrap\"><a href=\"" + data.workshows[i].link + "\"><img src=\"/image/" + data.workshows[i].pic + "\" alt=\"\"></a></div>\n                        <div class=\"workname\">" + data.workshows[i].name + "</div>\n                    </div>";
+                        str += " <div class=\"work clearfix\">\n                        <div class=\"imgwrap\"><a href=\"" + data.workshows[i].link + "\"><img src=\"" + data.workshows[i].pic + "\" alt=\"\"></a></div>\n                        <div class=\"workname\">" + data.workshows[i].name + "</div>\n                    </div>";
 
                         //     str += ` <div class="work clearfix">
                         //     <div class="imgwrap"><a href="${data.workshows[i].link}"><img src="${data.workshows[i].pic}" alt=""></a></div>
@@ -368,7 +283,7 @@ function addmorework() {
 
 
                 for (var i = 3, m = data.workshows.length; i < m; i++) {
-                    str += " <div class=\"work clearfix\">\n                <div class=\"imgwrap\"><a href=\"" + data.workshows[i].link + "\"><img src=\"/image/" + data.workshows[i].pic + "\" alt=\"\"></a></div>\n                <div class=\"workname\">" + data.workshows[i].name + "</div>\n            </div>";
+                    str += " <div class=\"work clearfix\">\n                <div class=\"imgwrap\"><a href=\"" + data.workshows[i].link + "\"><img src=\"" + data.workshows[i].pic + "\" alt=\"\"></a></div>\n                <div class=\"workname\">" + data.workshows[i].name + "</div>\n            </div>";
 
 
                     //         str += ` <div class="work clearfix">
@@ -424,9 +339,7 @@ $(".event .close").click(function() {
             $(".eventselect").removeAttr('style');
             $(".years ul li").removeClass("eventselect");
             $(".event").hide();
-            eventflag = true;
         });
-
     } else {
         $(".event").animate({
             'margin-left': '5.4rem'
@@ -437,61 +350,53 @@ $(".event .close").click(function() {
             $(".eventselect").removeAttr('style');
             $(".years ul li").removeClass("eventselect");
             $(".event").hide();
-            eventflag = true;
         });
-
     }
 
     $(".EVcontainer").height("8.52rem");
 
 
-
 })
-var eventflag = true;
 
 
 $(".years ul li").click(function() {
-    if (eventflag) {
 
+    $(this).addClass("eventselect");
+    var index = $(".years ul li").index(this);
+    displayevent(index);
+    if ((index + 1) % 2 == 0) {
+        $(".event").css({
+            'margin-left': '-5.4rem'
+        })
 
-        eventflag = false;
-        $(this).addClass("eventselect");
-        var index = $(".years ul li").index(this);
-        displayevent(index);
-        if ((index + 1) % 2 == 0) {
-            $(".event").css({
-                'margin-left': '-5.4rem'
-            })
-
-            $(".event").show();
-            $(".event").animate({
-                'margin-left': '0'
-            }, 1000);
-            $(".eventselect").animate({
-                'margin-right': '0'
-            }, 1000);
-        } else {
-            $(".event").css({
-                'margin-left': '5.4rem'
-            })
-
-            $(".event").show();
-            $(".event").animate({
-                'margin-left': '0'
-            }, 1000);
-            $(".eventselect").animate({
-                'margin-left': '0'
-            }, 1000);
-
-        }
+        $(".event").show();
+        $(".event").animate({
+            'margin-left': '0'
+        }, 1000);
+        $(".eventselect").animate({
+            'margin-right': '0'
+        }, 1000);
+    } else {
         $(".event").css({
             'margin-left': '5.4rem'
         })
-        location.href = "#Anchor4";
+
+        $(".event").show();
+        $(".event").animate({
+            'margin-left': '0'
+        }, 1000);
+        $(".eventselect").animate({
+            'margin-left': '0'
+        }, 1000);
 
     }
+    $(".event").css({
+        'margin-left': '5.4rem'
+    })
 
 
+
+    location.href = "#Anchor4";
 })
 
 $(".eventaddwrap").on("click", ".eventadd", function() {
@@ -503,7 +408,7 @@ $(".eventaddwrap").on("click", ".eventadd", function() {
 
 
 function displayevent(index) {
-    $(".year").html(index + 2014);
+
     $(".event ul").children().remove();
     var obj = {
         url: '/api/event/get?year=' + (index + 2014),
@@ -576,6 +481,7 @@ function displayevent(index) {
 
                 $(".event ul").append(str);
 
+                $(".year").html(index + 2014)
 
 
             } else {
@@ -648,17 +554,8 @@ function displayeventmore(index) {
 // 成员展示部分
 
 // 蒙版
-$(".members").on("click", ".meimgwrap", function() {
-    var index = $(".meimgwrap").index(this);
-    $mchoose = $(".members .mecover").eq(index);
-    if ($mchoose.css('display') == 'block') {
-        $mchoose.hide();
-    } else {
-        $(".members .mecover").hide();
-        // $(".members .mecover").eq(indexs).toggle();
-        $(".members .mecover").eq(index).show();
-    }
-
+$(".members .imgwrap").click(function(event) {
+    $(".members .mecover").toggle();
 });
 
 $(".circles li").click(function() {
@@ -674,7 +571,6 @@ $(".members .close").click(function() {
 })
 
 function addmember(index) {
-    $(".members .year").html(index);
     $(".members ul").children().remove();
 
     var obj = {
@@ -693,16 +589,16 @@ function addmember(index) {
 
 
                 for (var i = 0, m = data.members.length; i < m; i++) {
-                    str += " \n                    <li>\n                    <div class=\"meimgwrap\">\n                        <div class=\"mecover\">\n                            <p>" + data.members[i].intro + "</p>\n                        </div>\n                        <img class=\"img\" src=\"/image/" + data.members[i].photo + "\" alt=\"\">\n\n                    </div>\n                    <div class=\"text clearfix\">\n                        <span class=\"name\">" + data.members[i].name + "</span>\n                        <span class=\"depart\">" + data.members[i].department + "</span>\n                    </div>\n                </li>";
+                    str += " \n                    <li>\n                    <div class=\"imgwrap\">\n                        <div class=\"mecover\">\n                            <p>" + data.members[i].intro + "</p>\n                        </div>\n                        <img class=\"img\" src=\"" + data.members[i].photo + "\" alt=\"\">\n\n                    </div>\n                    <div class=\"text clearfix\">\n                        <span class=\"name\">" + data.members[i].name + "</span>\n                        <span class=\"depart\">" + data.members[i].department + "</span>\n                    </div>\n                </li>";
 
 
                     //     str += ` 
                     //     <li>
-                    //     <div class="meimgwrap">
+                    //     <div class="imgwrap">
                     //         <div class="mecover">
                     //             <p>${data.members[i].intro}</p>
                     //         </div>
-                    //         <img class="img" src="/image/${data.members[i].photo}" alt="">
+                    //         <img class="img" src="${data.members[i].photo}" alt="">
 
                     //     </div>
                     //     <div class="text clearfix">
@@ -739,7 +635,7 @@ function addmember(index) {
 var HEAD_SIZE = $(".headamount").val() - 0; //记录头像的个数
 var headimg = 1; //默认显示第一个头像
 //点击头像切换头像
-$(".header .head_c li").click(function() {
+$(".header").click(function() {
     if (headimg == HEAD_SIZE) {
         headimg -= HEAD_SIZE;
     }
@@ -762,14 +658,10 @@ $(".make_comment").click(function() {
     location.href = "#Anchor6";
 })
 
-function close_comment() {
+$(".write .close").click(function() {
     $(".write").hide();
     $(".commentwrap").show();
     $(".comment_button").show();
-}
-$(".write .close").click(function() {
-
-    close_comment();
 })
 
 var Iscomment = false,
@@ -786,10 +678,10 @@ $(".write .id input").on({
     },
     keyup: function(event) {
 
-        // if ($(this).prop('comStart1')) {
-        //     flag1++;
-        //     return;
-        // }
+        if ($(this).prop('comStart1')) {
+            flag1++;
+            return;
+        }
 
 
         if ($(".write .id input").val().length > 8 && event.keyCode != 8) {
@@ -799,25 +691,23 @@ $(".write .id input").on({
             $(".write .id input").val($(".write .id input").val().substring(0, 8));
 
         }
+    },
+    onpaste: function() {
+        var textArea = $(this);
+        setTimeout(function() {
+            // console.log(textArea.val());
+        }, 200);
+    },
+
+    compositionstart: function() {
+        $(this).prop('comStart1', true);
+        // console.log("zhongwen")
+    },
+    compositionend: function() {
+        $(this).prop('comStart1', false);
+        // console.log("zhongwe3ndn")
+
     }
-    // },
-    // onpaste: function() {
-    //     var textArea = $(this);
-    //     setTimeout(function() {
-    //         // console.log(textArea.val());
-    //     }, 200);
-    // }
-    // ,
-
-    // compositionstart: function() {
-    //     $(this).prop('comStart1', true);
-    //     // console.log("zhongwen")
-    // },
-    // compositionend: function() {
-    //     $(this).prop('comStart1', false);
-    //     // console.log("zhongwe3ndn")
-
-    // }
 })
 //留言框判断
 //如果用户自己发起删除不应该判断为超出
@@ -830,23 +720,22 @@ $(".write textarea").on({
     },
 
     keyup: function(event) {
-        // if ($(this).prop('comStart')) return;
+        if ($(this).prop('comStart')) return;
 
         if ($(".write textarea").val().length > 80 && event.keyCode != 8) {
             alert("字数太多了！");
             $(".write textarea").val($(".write textarea").val().substring(0, 80));
 
         }
+    },
+    compositionstart: function() {
+        // console.log("zhongwen")
+        $(this).prop('comStart', true);
+    },
+    compositionend: function() {
+        // console.log("zhongwenedn")
+        $(this).prop('comStart', false);
     }
-    // ,
-    // compositionstart: function() {
-    //     // console.log("zhongwen")
-    //     $(this).prop('comStart', true);
-    // },
-    // compositionend: function() {
-    //     // console.log("zhongwenedn")
-    //     $(this).prop('comStart', false);
-    // }
 })
 
 //验证码输入部分
@@ -903,14 +792,7 @@ $(".write .submit").click(function() {
                 } else if (data.statusC == 0) {
                     alert("留言发表成功!");
                     close_comment();
-                    // location.reload();
-                    $(".commentwrap").children().remove();
-                    addcomment();
-                    $(".write textarea").val('');
-                    $(".write .id input").val('');
-                    $(".verify input").val('');
-
-
+                    location.reload();
                 }
             },
             error: function(jqXHR) {
@@ -949,17 +831,8 @@ $(window).on("load", function() {
 //     }
 // })
 
-var addcflag = true;
-
 $(".check_comment").click(function(event) {
-    if (addcflag) {
-        addcflag = false;
-        addcomment();
-        addcflag = true;
-    }
-
-
-
+    addcomment();
 });
 $("#ident").click(function() {
     changeverify();
@@ -985,7 +858,7 @@ function addcomment() {
         code = 0;
         firstTime = false;
     } else {
-        code = $(".commentwrap .comments:last-child").attr('id')
+        code = $(".index_topic .comments:last-child").attr('id')
 
         var nowtime = new Date().getTime();
         if (nowtime - lasttime < 2000) {
@@ -1004,36 +877,22 @@ function addcomment() {
     }
     promisesetajax(obj).then(function(data) {
             var str = "";
-            if (data.success) {
+            if (data.comment == '[]') {
+                $(".out_tip").show();
+            } else {
 
+                for (var i = 0, m = data.comment.length; i < m; i++) {
 
-                if (data.comment == '[]') {
-                    // $(".out_tip").show();
-                    $(".check_comment").css({
-                        'background-image': '',
-                        'background-color': '#f7e8c6'
-                    })
-                    $(".check_comment").attr('disabled', 'true');
-                } else {
+                    if (data.comment[i].admin == '' || data.comment[i].admin == null) {
+                        str += "<div class=\"comments clearfix\" id=\"" + data.comment[i].code + "\">\n\t         \t\t\t \t<div class=\"head_c\"><img src=\"" + data.comment[i].head + "\" alt=\"\" /></div>\n\t          \t\t\t\t<div class=\"right clearfix\">\n\t\t\t\t            <div class=\"clearfix\" >\n\t\t\t\t              \t<div class=\"id\">" + xssdf(data.comment[i].nickname) + ("</div>\n\t\t\t\t             \t <div class=\"time\">" + data.comment[i].createTime + "</div>\n\t\t\t\t            </div>\n\t\t\t\t            <p>") + xssdf(data.comment[i].content) + "</p>\n\t\t\t\t          \t</div>\n\t\t\t        \t</div>\n        ";
+                    } else {
 
-                    for (var i = 0, m = data.comment.length; i < m; i++) {
-
-                        if (data.comment[i].admin == '' || data.comment[i].admin == null) {
-                            str += "<div class=\"comments clearfix\" id=\"" + data.comment[i].code + "\">\n\t         \t\t\t \t<div class=\"head_c\"><img src=\"" + data.comment[i].head + "\" alt=\"\" /></div>\n\t          \t\t\t\t<div class=\"right clearfix\">\n\t\t\t\t            <div class=\"clearfix\" >\n\t\t\t\t              \t<div class=\"id\">" + xssdf(data.comment[i].nickname) + ("</div>\n\t\t\t\t             \t <div class=\"time\">" + data.comment[i].createTime + "</div>\n\t\t\t\t            </div>\n\t\t\t\t            <p>") + xssdf(data.comment[i].content) + "</p>\n\t\t\t\t          \t</div>\n\t\t\t        \t</div>\n        ";
-                        } else {
-
-                            str += "<div class=\"comments clearfix\" id=\"" + data.comment[i].code + "\">\n\t         \t\t\t \t<div class=\"head_c\"><img src=\"" + data.comment[i].head + "\" alt=\"\" /></div>\n\t          \t\t\t\t<div class=\"right clearfix\">\n\t\t\t\t            <div class=\"clearfix\" >\n\t\t\t\t              \t<div class=\"id\">" + xssdf(data.comment[i].nickname) + ("</div>\n\t\t\t\t             \t <div class=\"time\">" + data.comment[i].createTime + "</div>\n\t\t\t\t            </div>\n\t\t\t\t            <p>") + xssdf(data.comment[i].content) + ("</p>\n\t\t\t\t            <div class=\"adminreply clearfix\">\n\t\t\t\t                <span>\u56DE\u590D\uFF1A</span>\n\t\t\t\t                <span> " + data.comment[i].admin + "</span>\n\t\t\t\t              </div> \n\t\t\t\t          \t</div>\n\t\t\t        \t</div>\n        ");
-                        }
-
-
+                        str += "<div class=\"comments clearfix\" id=\"" + data.comment[i].code + "\">\n\t         \t\t\t \t<div class=\"head_c\"><img src=\"" + data.comment[i].head + "\" alt=\"\" /></div>\n\t          \t\t\t\t<div class=\"right clearfix\">\n\t\t\t\t            <div class=\"clearfix\" >\n\t\t\t\t              \t<div class=\"id\">" + xssdf(data.comment[i].nickname) + ("</div>\n\t\t\t\t             \t <div class=\"time\">" + data.comment[i].createTime + "</div>\n\t\t\t\t            </div>\n\t\t\t\t            <p>") + xssdf(data.comment[i].content) + ("</p>\n\t\t\t\t            <div class=\"adminreply clearfix\">\n\t\t\t\t                <span>\u56DE\u590D\uFF1A</span>\n\t\t\t\t                <span> " + data.comment[i].admin + "</span>\n\t\t\t\t              </div> \n\t\t\t\t          \t</div>\n\t\t\t        \t</div>\n        ");
                     }
-                    $(".commentwrap").append(str);
-
 
 
                 }
-
-            } else {
+                $(".commentwrap").append(str);
 
 
             }

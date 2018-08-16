@@ -37,8 +37,8 @@ function promisesetajax(obj) {
 
 	})
 }
-H = document.documentElement.clientWidth; //获得窗口宽度
-W = document.documentElement.clientHeight; //获得窗口高度
+H = $(window).height() || document.body.offsetHeight; //获得窗口宽度
+W = $(window).width() || document.body.offsetWidth; //获得窗口高度
 var p = 9.6/5.4
 
 if(H/W>p)

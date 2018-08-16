@@ -262,7 +262,7 @@ img
 }
 .choosebody
 {
-    /*width: 70%;*/
+    width: 70%;
     margin: 0px auto;
 }
 .choosebody li
@@ -278,7 +278,6 @@ img
     text-align: center;
     float: left;
     color: #458bac;
-    margin-right: 0.16rem;
 
 }
 .choosebody li:hover
@@ -292,15 +291,12 @@ img
 }
 .choosebody li:nth-child(2)
 {
+    float: right;
     margin-bottom: 0.205rem;
-}
-.choosebody li:nth-child(3)
-{
-    margin-right: 0;
 }
 .choosebody li:nth-child(4)
 {
-    
+    float: right;
 }
 .intro_title
 {

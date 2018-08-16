@@ -1,8 +1,3 @@
-a
-{
-	line-height: 0px;
-	font-size: 0px;
-}
 html {
     color: #000;
     background: #fff;
@@ -115,10 +110,7 @@ li{
 	cursor: pointer;
 }
 body{font-family:Helvetica;}
-img
-{
-	outline: none;
-}
+
 
 .clearfix::after {
     content: "";
@@ -130,10 +122,7 @@ img
     clear: both;
     display: table;
 }
-.allcontainer
-{
-	overflow-x: hidden;
-}
+
 .cover
 {
 	width: 100%;
@@ -162,8 +151,6 @@ img
 	top: 0;
 	left: 0;
 	z-index: 400;
-	padding-top: 0.07rem;
-	padding-bottom: 0.07rem;
 
 }
 .logo 
@@ -208,7 +195,7 @@ img
 	position: absolute;
 	right: 0.395rem;
 	/*top: 1.07rem;*/
-	top: 0.68rem;
+	top: 0.58rem;
 	z-index: 100;
 	display: none;
 
@@ -238,12 +225,12 @@ img
 	text-align: center;
 	vertical-align: middle;
 }
-/*.openmenu li:hover
+.openmenu li:hover
 {
 	background-color: #74bee1;
 	color: #ffffff;
 	cursor: pointer;
-}*/
+}
 .openmenu .nowpage
 {
 	background-color: #74bee1;
@@ -349,7 +336,7 @@ h2
 	width: 1.905rem;
 	height: auto;
 	position: absolute;
-	right: -0.2rem;
+	right: -0.5rem;
 	top: 4.255rem;
 }
 .bling_star
@@ -357,11 +344,26 @@ h2
 	width: 4.4rem;
 	height: auto;
 	position: absolute;
-	top: 1.46rem;
+	top: 2.7rem;
 	left: 0.4rem;
 
 }
-
+.liuxing
+{
+	width: 0.4rem;
+    height: auto;
+    position: absolute;
+    left: 3rem;
+    top: 2rem;
+}
+.liuxing2
+{
+    width: 0.35rem;
+    height: auto;
+    position: absolute;
+    left: 2rem;
+    top: 3.05rem;
+}
 .index_bottom h2
 {
 	font-size: 0.13rem;
@@ -452,12 +454,12 @@ h2
 .topics>div
 {
 	float: left;
-    width: 0.7rem;
-    height: auto;
-    height: 0.75rem;
-    margin: 0px;
-    position: relative;
-    margin-right: 1.06rem;
+	width: 0.63rem;
+	height: auto;
+	height: 0.75rem;
+	margin: 0px;
+	position: relative;
+	margin-right: 1.17rem;
 
 }
 .topic3
@@ -678,10 +680,6 @@ h2
 {
 	margin-bottom: 0.335rem;
 }
-.mainer
-{
-	min-height: 7.155rem;
-}
 .workwarp
 {
 	width: 3.435rem;
@@ -694,9 +692,8 @@ h2
 	width: auto;
 	height: 1.71rem;
 	/*background-color: red;*/
-	border: 0.02rem solid rgb(191,227,244);
-	border-radius: 0.05rem;
-	overflow: hidden;
+	border: 1px solid rgb(191,227,244);
+	border-radius: 5px;
 }
 .imgwrap a
 {
@@ -708,7 +705,6 @@ h2
 	max-width: 100%;
 	width: 100%;
 	height: auto;
-
 }
 
 .workname
@@ -820,17 +816,6 @@ h2
 	position: absolute;
 	left: 0.285rem;
 	top: 2.08rem;
-}
-.hx
-{
-	width: 1.53rem;
-	height: 1.53rem;
-	position: absolute;
-}
-.hx:nth-child(2)
-{
-	width: 1.2rem;
-	height: 1.2rem;
 }
 .event
 {
@@ -965,10 +950,9 @@ h2
 	min-height: 9.6rem;
 	background: url(../img/MEbackground.png);
 	background-repeat: no-repeat;
-	background-size: 80%;
+	background-size: cover;
 	background-position: center;
 	position: relative;
-	background-color: #f7f7f7;
 
 
 }
@@ -1050,23 +1034,13 @@ h2
 {
 	margin-bottom: 0.5rem;
 }
-.members .meimgwrap
+.members .imgwrap
 {
 	position: relative;
 	width: 1.905rem;
 	height: 1.92rem;
 	/*background-color: red;*/
 	margin-bottom: 0.355rem;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	overflow: hidden;
-}
-.meimgwrap img
-{
-	max-width: 100%;
-	width: 100%;
-	height: auto;
 }
 .members .mecover{
 	width: 1.905rem;
@@ -1471,14 +1445,12 @@ h2
 }
 .out_tip{
 	width: auto;
-	font-size: 0.1rem;
 	/*margin: 0px auto;*/
 	text-align: center;
 }
 .commentwrap
 {
 	width: 4.51rem;
-	min-height: 6.9rem;
 
 	margin: 0px auto;
 	margin-top: 0.22rem;
